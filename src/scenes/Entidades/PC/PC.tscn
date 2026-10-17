@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://4l3ekvw7dxsq"]
+
+[ext_resource type="Script" uid="uid://dh2ftyq0mt42v" path="res://src/scenes/Entidades/PC/pc.gd" id="1_1crj2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fhsag"]
+font_size = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mo3l"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101960786, 0.32156864, 0.972549, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpbax"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.31764707, 0.69803923, 0.627451, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1crj2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101960786, 0.32156864, 0.972549, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4xoa"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.31764707, 0.69803923, 0.627451, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Pc" type="Control" unique_id=654136676]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1crj2")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1625621231]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 80.0
+offset_right = 986.0
+offset_bottom = 582.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=208932113]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1707867565]
+layout_mode = 2
+text = "mensaje"
+label_settings = SubResource("LabelSettings_fhsag")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=181958883]
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="SI" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=887287063]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3mo3l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kpbax")
+text = "SI"
+
+[node name="NO" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1481220385]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_1crj2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v4xoa")
+text = "NO
+"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/SI" to="." method="_on_si_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/NO" to="." method="_on_no_pressed"]

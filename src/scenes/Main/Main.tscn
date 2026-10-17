@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://8npqjhyvcwp1"]
+
+[ext_resource type="Script" uid="uid://dn2vuiqwi2hfk" path="res://src/scenes/Main/main.gd" id="1_mqhj8"]
+
+[node name="Main" type="Control" unique_id=983163245]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mqhj8")
+
+[node name="BG" type="ColorRect" parent="." unique_id=2065121226]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 664.0
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=630565502]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 211.0
+offset_top = 88.0
+offset_right = 894.0
+offset_bottom = 563.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=1387856281]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=158892800]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=399346426]
+layout_mode = 2
+text = "JUEGO"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=1741669685]
+layout_mode = 2
+text = "JUGAR"
+
+[node name="Button2" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=819216145]
+layout_mode = 2
+text = "CREDITOS"
+
+[node name="Button3" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=197540671]
+layout_mode = 2
+text = "SALIR"
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

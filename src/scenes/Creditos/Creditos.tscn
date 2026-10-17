@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bmf5rhuek1mf7"]
+
+[node name="Creditos" type="Node2D" unique_id=1220855157]
+
+[node name="Label" type="Label" parent="." unique_id=765216791]
+offset_left = 485.0
+offset_top = 293.0
+offset_right = 617.0
+offset_bottom = 316.0
+text = "estoy en creditos"
