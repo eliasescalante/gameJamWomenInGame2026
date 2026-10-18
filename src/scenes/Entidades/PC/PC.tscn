@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://4l3ekvw7dxsq"]
 
 [ext_resource type="Script" uid="uid://dh2ftyq0mt42v" path="res://src/scenes/Entidades/PC/pc.gd" id="1_1crj2"]
+[ext_resource type="Texture2D" uid="uid://debukg7yb2mxe" path="res://assets/Notificacion.png" id="2_3mo3l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fhsag"]
 font_size = 40
@@ -53,42 +54,56 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[node name="Pc" type="Control" unique_id=654136676]
-layout_mode = 3
-anchors_preset = 0
+[node name="Pc" type="PanelContainer" unique_id=995380473]
+custom_minimum_size = Vector2(600, 250)
+propagate_maximum_size = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -127.0
+offset_right = 290.0
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_1crj2")
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1625621231]
-layout_mode = 0
-offset_left = 145.0
-offset_top = 80.0
-offset_right = 986.0
-offset_bottom = 582.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=208932113]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1488384444]
+custom_minimum_size = Vector2(600, 250)
 layout_mode = 2
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=208932113]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 9
 alignment = 1
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1707867565]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1707867565]
 layout_mode = 2
-text = "mensaje"
+text = "mensaje: 0"
 label_settings = SubResource("LabelSettings_fhsag")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=181958883]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=181958883]
 layout_mode = 2
 theme_override_constants/separation = 14
 alignment = 1
 
-[node name="SI" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=887287063]
+[node name="SI" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=887287063]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_3mo3l")
 theme_override_styles/hover = SubResource("StyleBoxFlat_kpbax")
 text = "SI"
 
-[node name="NO" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1481220385]
+[node name="NO" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1481220385]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_1crj2")
@@ -96,5 +111,12 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_v4xoa")
 text = "NO
 "
 
-[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/SI" to="." method="_on_si_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/NO" to="." method="_on_no_pressed"]
+[node name="Campana" type="Sprite2D" parent="." unique_id=1550899800]
+position = Vector2(655, -129)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_3mo3l")
+centered = false
+offset = Vector2(-1190.0005, -0.00018310547)
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/SI" to="." method="_on_si_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/NO" to="." method="_on_no_pressed"]
