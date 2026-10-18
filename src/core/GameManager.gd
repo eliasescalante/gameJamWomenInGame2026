@@ -28,7 +28,7 @@ var lista_preguntas: Array = [
 	},
 	{
 		"frase": "¿Trabajar horas extras para tu jefe?",
-		"si": -10,
+		"si": -15,
 		"no": 10,
 		"res_si": "El cansancio me consume... Necesito parar.",
 		"res_no": "Me pongo firme con mi tiempo personal."
@@ -108,7 +108,7 @@ var lista_preguntas: Array = [
 		"si": 10,
 		"no": -10,
 		"res_si": "Se me alivia la tensión en la espalda.",
-		"res_no": "Estoy todo contracturado frente a la pantalla."
+		"res_no": "Estoy toda contracturada frente a la pantalla."
 	},
 	{
 		"frase": "¿Responder el mensaje de tu pareja?",

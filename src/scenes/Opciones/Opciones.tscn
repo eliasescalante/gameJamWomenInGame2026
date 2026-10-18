@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://hpubwl1rh48r"]
+
+[ext_resource type="Script" uid="uid://c2mn0ws6kn6t0" path="res://src/scenes/Opciones/opciones.gd" id="1_8mej8"]
+[ext_resource type="Texture2D" uid="uid://cwop12s4pmtx8" path="res://assets/portada2.png" id="1_vmihc"]
+[ext_resource type="FontFile" uid="uid://c7fj18mo8p653" path="res://assets/Bitcount_Grid_Single,Indie_Flower,Pixelify_Sans/Indie_Flower/IndieFlower-Regular.ttf" id="3_w6jte"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fhsag"]
+font = ExtResource("3_w6jte")
+font_size = 80
+font_color = Color(0.8719926, 0.00062723993, 0.8755634, 1)
+outline_size = 4
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.45882353)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nde43"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7411765, 0.3254902, 0.8980392, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wment"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 0.30588236, 1, 0.4)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="LabelSettings" id="LabelSettings_qpix5"]
+font = ExtResource("3_w6jte")
+font_size = 80
+font_color = Color(1, 0.30980393, 1, 1)
+outline_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ckdad"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7411765, 0.3254902, 0.8980392, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6jte"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.20853907, 0.26133156, 0.63190824, 0.50980395)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2gx23"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwvo3"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.69803923, 0.14117648, 0.8156863, 0.46666667)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 5
+
+[node name="Opciones" type="Control" unique_id=939214749]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8mej8")
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=158954237]
+position = Vector2(509, 481)
+texture = ExtResource("1_vmihc")
+
+[node name="Panel" type="Panel" parent="." unique_id=2078999736]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 168.0
+offset_right = 954.0
+offset_bottom = 573.0
+
+[node name="Musica" type="Label" parent="Panel" unique_id=25601589]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 14.0
+offset_right = 469.0
+offset_bottom = 161.0
+text = "Musica"
+label_settings = SubResource("LabelSettings_fhsag")
+
+[node name="Music" type="HSlider" parent="Panel" unique_id=643150507]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 109.0
+offset_right = 497.0
+offset_bottom = 160.0
+theme_override_styles/slider = SubResource("StyleBoxFlat_nde43")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_wment")
+
+[node name="SFX2" type="Label" parent="Panel" unique_id=1877065043]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 134.0
+offset_right = 383.0
+offset_bottom = 252.0
+text = "SFX"
+label_settings = SubResource("LabelSettings_qpix5")
+
+[node name="SFX" type="HSlider" parent="Panel" unique_id=330644718]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 218.0
+offset_right = 503.0
+offset_bottom = 279.0
+theme_override_styles/slider = SubResource("StyleBoxFlat_ckdad")
+step = 0.5
+
+[node name="Button3" type="Button" parent="Panel" unique_id=2075530579]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 286.0
+offset_right = 437.0
+offset_bottom = 359.0
+theme_override_colors/font_color = Color(0.8745098, 0.21960784, 0.8745098, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_w6jte")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_w6jte")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2gx23")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uwvo3")
+text = "ATRAS"
+
+[connection signal="pressed" from="Panel/Button3" to="." method="_on_button_3_pressed"]

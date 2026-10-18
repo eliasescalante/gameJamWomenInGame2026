@@ -35,24 +35,30 @@ script = ExtResource("1_eoke6")
 
 [node name="Peligro" type="AudioStreamPlayer" parent="." unique_id=151466063]
 stream = SubResource("AudioStreamOggVorbis_8joqt")
+bus = &"Music"
 
 [node name="calma" type="AudioStreamPlayer" parent="." unique_id=1360530745]
 stream = SubResource("AudioStreamOggVorbis_eoke6")
+bus = &"Music"
 
 [node name="SFX" type="Node2D" parent="." unique_id=1386808920]
 
 [node name="SfxRechazar" type="AudioStreamPlayer" parent="SFX" unique_id=2128081933]
 stream = ExtResource("2_vjxxv")
 volume_db = 24.0
+bus = &"SFX"
 
 [node name="SfxClick" type="AudioStreamPlayer" parent="SFX" unique_id=1044822897]
 stream = ExtResource("3_7hb7m")
 volume_db = 24.0
+bus = &"SFX"
 
 [node name="SfxNotificacion" type="AudioStreamPlayer" parent="SFX" unique_id=358257690]
 stream = ExtResource("4_vbikq")
 volume_db = 1.175
+bus = &"SFX"
 
 [node name="SfxAceptar" type="AudioStreamPlayer" parent="SFX" unique_id=2093064560]
 stream = ExtResource("5_0uvrr")
 volume_db = 24.0
+bus = &"SFX"

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://8npqjhyvcwp1"]
 
 [ext_resource type="Script" uid="uid://dn2vuiqwi2hfk" path="res://src/scenes/Main/main.gd" id="1_mqhj8"]
-[ext_resource type="Texture2D" uid="uid://cwop12s4pmtx8" path="res://assets/portada2.png" id="2_5llug"]
+[ext_resource type="Texture2D" uid="uid://fg3amysm05vl" path="res://assets/portada.png" id="2_5llug"]
 [ext_resource type="FontFile" uid="uid://c7fj18mo8p653" path="res://assets/Bitcount_Grid_Single,Indie_Flower,Pixelify_Sans/Indie_Flower/IndieFlower-Regular.ttf" id="3_2avcn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5llug"]
@@ -9,7 +9,19 @@ content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0.16470589, 0.03529412, 0.5176471, 0.6)
+bg_color = Color(0.16470589, 0.03529412, 0.5176471, 0)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hk5by"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -22,10 +34,10 @@ content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
 bg_color = Color(0.69903344, 0.14224073, 0.8168442, 0.6)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb7lw"]
@@ -33,7 +45,19 @@ content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0.16470589, 0.03529412, 0.5176471, 0.6)
+bg_color = Color(0.16470589, 0.03529412, 0.5176471, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1rgc"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -45,11 +69,11 @@ content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0.69803923, 0.14117648, 0.8156863, 0.6)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
+bg_color = Color(0.69803923, 0.14117648, 0.8156863, 0.46666667)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 corner_detail = 5
 
 [node name="Main" type="Control" unique_id=983163245]
@@ -57,12 +81,11 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_mqhj8")
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=601073406]
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1156821045]
 repeat_size = Vector2(300, 0)
-autoscroll = Vector2(10, 0)
 
 [node name="Botones" type="Sprite2D" parent="Parallax2D" unique_id=1393588399]
-position = Vector2(571.00006, 338)
+position = Vector2(409.00003, 317)
 scale = Vector2(0.91749835, 0.7296297)
 texture = ExtResource("2_5llug")
 region_enabled = true
@@ -70,31 +93,42 @@ region_rect = Rect2(460.1153, 0, 1459.8848, 1080)
 
 [node name="Button" type="Button" parent="." unique_id=1741669685]
 layout_mode = 0
-offset_left = 319.0
-offset_top = 331.0
-offset_right = 516.0
-offset_bottom = 415.0
+offset_left = 413.0
+offset_top = 337.0
+offset_right = 645.0
+offset_bottom = 406.0
 theme_override_constants/outline_size = 3
 theme_override_constants/align_to_largest_stylebox = 2
 theme_override_fonts/font = ExtResource("3_2avcn")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_5llug")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hk5by")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2avcn")
-text = "
-JUGAR         
-                   "
 
 [node name="Button2" type="Button" parent="." unique_id=819216145]
 layout_mode = 0
-offset_left = 319.0
-offset_top = 446.0
-offset_right = 513.0
-offset_bottom = 535.0
+offset_left = 415.0
+offset_top = 541.0
+offset_right = 644.0
+offset_bottom = 614.0
 theme_override_fonts/font = ExtResource("3_2avcn")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_bb7lw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s1rgc")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4lipg")
-text = " CREDITOS"
+
+[node name="Button3" type="Button" parent="." unique_id=1445826484]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 436.0
+offset_right = 644.0
+offset_bottom = 509.0
+theme_override_fonts/font = ExtResource("3_2avcn")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_bb7lw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s1rgc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4lipg")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

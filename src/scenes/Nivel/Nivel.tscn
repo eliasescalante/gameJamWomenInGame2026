@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://5qjwx6efxunk" path="res://src/scenes/Entidades/Avatar/Avatar.tscn" id="2_xopn3"]
 [ext_resource type="Texture2D" uid="uid://x1pg0rfketid" path="res://assets/monitor sano con fondo transparente.png" id="3_fl485"]
 [ext_resource type="PackedScene" uid="uid://4l3ekvw7dxsq" path="res://src/scenes/Entidades/PC/PC.tscn" id="3_uuxnk"]
+[ext_resource type="Texture2D" uid="uid://dh3y8g2s5dxv0" path="res://assets/ventanabrowser.png" id="4_4wv08"]
 [ext_resource type="Shader" uid="uid://b7acpvoskjke" path="res://src/utils/TunelNivel.gdshader" id="5_uuxnk"]
 [ext_resource type="Script" uid="uid://cuejcxa1q0jhp" path="res://src/scenes/Nivel/color_rect.gd" id="6_eals6"]
 [ext_resource type="Script" uid="uid://dn1ecnm0ntkdx" path="res://src/scenes/Nivel/camera_2d.gd" id="7_x033l"]
@@ -30,6 +31,11 @@ texture = ExtResource("2_fl485")
 position = Vector2(558, 282)
 scale = Vector2(0.85885423, 0.8240741)
 texture = ExtResource("3_fl485")
+
+[node name="browser" type="Sprite2D" parent="." unique_id=809030520]
+position = Vector2(540, 417.00003)
+scale = Vector2(0.35291663, 0.3895833)
+texture = ExtResource("4_4wv08")
 
 [node name="Pc" parent="." unique_id=654136676 instance=ExtResource("3_uuxnk")]
 offset_left = 248.0
