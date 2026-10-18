@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d4hmj767kenkb"]
 
 [ext_resource type="Script" uid="uid://bo28ixod2570g" path="res://src/scenes/Nivel/nivel.gd" id="1_xopn3"]
-[ext_resource type="Texture2D" uid="uid://c61n3dii6805a" path="res://assets/HABITACION.png" id="2_fl485"]
+[ext_resource type="Texture2D" uid="uid://bw38jkcehcb5f" path="res://assets/monitores/fondo oscuro.png" id="2_4wv08"]
 [ext_resource type="PackedScene" uid="uid://5qjwx6efxunk" path="res://src/scenes/Entidades/Avatar/Avatar.tscn" id="2_xopn3"]
 [ext_resource type="Texture2D" uid="uid://x1pg0rfketid" path="res://assets/monitor sano con fondo transparente.png" id="3_fl485"]
 [ext_resource type="PackedScene" uid="uid://4l3ekvw7dxsq" path="res://src/scenes/Entidades/PC/PC.tscn" id="3_uuxnk"]
@@ -18,14 +18,10 @@ shader_parameter/suavizado = 0.4
 [node name="Nivel" type="Node2D" unique_id=2100650246]
 script = ExtResource("1_xopn3")
 
-[node name="Parallax" type="Parallax2D" parent="." unique_id=1194257536]
-repeat_size = Vector2(500, 0)
-autoscroll = Vector2(10, 0)
-
-[node name="Habitacion" type="Sprite2D" parent="Parallax" unique_id=2083964486]
-position = Vector2(341, 302)
-scale = Vector2(1, 1.386)
-texture = ExtResource("2_fl485")
+[node name="Habitacion" type="Sprite2D" parent="." unique_id=2083964486]
+position = Vector2(647, 444)
+scale = Vector2(0.75842714, 0.88683337)
+texture = ExtResource("2_4wv08")
 
 [node name="VentanaPC" type="Sprite2D" parent="." unique_id=1916270205]
 position = Vector2(558, 282)

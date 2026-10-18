@@ -12,7 +12,7 @@ func _ready() -> void:
 		animated_sprite.play(anim_aleatoria)
 	
 	# 2. Hacer el ícono semitransparente (translúcido)
-	modulate.a = 0.35
+	modulate.a = 0.75
 	
 	# 3. Animación suave de aparición
 	scale = Vector2.ZERO

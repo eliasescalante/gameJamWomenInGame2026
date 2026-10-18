@@ -5,10 +5,22 @@
 [ext_resource type="Texture2D" uid="uid://d2dsbj2lr34a8" path="res://assets/Pensamiento1.png" id="2_kpbax"]
 [ext_resource type="FontFile" uid="uid://c7fj18mo8p653" path="res://assets/Bitcount_Grid_Single,Indie_Flower,Pixelify_Sans/Indie_Flower/IndieFlower-Regular.ttf" id="2_y2nex"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2nex"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
 [sub_resource type="LabelSettings" id="LabelSettings_fhsag"]
 font = ExtResource("2_y2nex")
 font_size = 40
-font_color = Color(0.9428228, 0.94282264, 0.94282264, 1)
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mo3l"]
 content_margin_left = 4.0
@@ -78,6 +90,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_y2nex")
 script = ExtResource("1_1crj2")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1488384444]
@@ -120,6 +133,7 @@ text = "NO
 "
 
 [node name="GloboPensamiento" type="Control" parent="." unique_id=1021442364]
+visible = false
 layout_mode = 2
 
 [node name="SpriteGlobo" type="Sprite2D" parent="GloboPensamiento" unique_id=1481226247]

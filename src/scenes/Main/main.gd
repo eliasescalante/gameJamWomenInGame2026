@@ -3,7 +3,7 @@ extends Control
 func _on_button_pressed() -> void:
 	AudioManager.play_sfx_click()
 	#voy al nivel
-	get_tree().change_scene_to_file("res://src/scenes/Nivel/Nivel.tscn")
+	get_tree().change_scene_to_file("res://src/scenes/Contexto/Contexto.tscn")
 
 
 func _on_button_2_pressed() -> void:

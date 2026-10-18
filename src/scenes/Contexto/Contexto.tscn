@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dyh3sqresbmom"]
+
+[ext_resource type="Texture2D" uid="uid://v03pbxur7a8i" path="res://assets/HABITACION 3.png" id="1_j8a2c"]
+[ext_resource type="Script" uid="uid://cnwjqw63fncbf" path="res://src/scenes/Contexto/contexto.gd" id="1_xhnoq"]
+[ext_resource type="FontFile" uid="uid://c7fj18mo8p653" path="res://assets/Bitcount_Grid_Single,Indie_Flower,Pixelify_Sans/Indie_Flower/IndieFlower-Regular.ttf" id="2_d6drl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fhsag"]
+font = ExtResource("2_d6drl")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+outline_color = Color(0.98234254, 0.9823423, 0.9823424, 1)
+
+[node name="Contexto" type="Control" unique_id=41106519]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xhnoq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=391021556]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 657.0
+texture = ExtResource("1_j8a2c")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=476879160]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 184.0
+offset_right = 849.0
+offset_bottom = 499.0
+text = "¡Por fin me tomé un fin de semana para jammear!"
+label_settings = SubResource("LabelSettings_fhsag")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=83224767]
+layout_mode = 0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 1213.0
+offset_bottom = 761.0
+color = Color(0.029506557, 0.029506557, 0.029506557, 1)

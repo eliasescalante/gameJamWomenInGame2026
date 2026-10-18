@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dn2vuiqwi2hfk" path="res://src/scenes/Main/main.gd" id="1_mqhj8"]
 [ext_resource type="Texture2D" uid="uid://fg3amysm05vl" path="res://assets/portada.png" id="2_5llug"]
 [ext_resource type="FontFile" uid="uid://c7fj18mo8p653" path="res://assets/Bitcount_Grid_Single,Indie_Flower,Pixelify_Sans/Indie_Flower/IndieFlower-Regular.ttf" id="3_2avcn"]
+[ext_resource type="Texture2D" uid="uid://dpww87snchgaj" path="res://assets/portada 3.png" id="4_2avcn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5llug"]
 content_margin_left = 4.0
@@ -33,7 +34,7 @@ content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0.69903344, 0.14224073, 0.8168442, 0.6)
+bg_color = Color(0.69803923, 0.14117648, 0.8156863, 0.6)
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
@@ -128,6 +129,12 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_bb7lw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_s1rgc")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4lipg")
+
+[node name="Titulo" type="Sprite2D" parent="." unique_id=1345181386]
+position = Vector2(840, 135)
+texture = ExtResource("4_2avcn")
+region_enabled = true
+region_rect = Rect2(1276.34, 246.09991, 76.25989, 95.70004)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
