@@ -1,10 +1,26 @@
 [gd_scene format=3 uid="uid://bmf5rhuek1mf7"]
 
-[node name="Creditos" type="Node2D" unique_id=1220855157]
+[ext_resource type="Texture2D" uid="uid://ca3rov202kxnk" path="res://assets/cosas/creditos.png" id="1_f7w0e"]
+[ext_resource type="Script" uid="uid://ddp2w1whrjifn" path="res://src/scenes/Creditos/creditos.gd" id="1_jrvxy"]
 
-[node name="Label" type="Label" parent="." unique_id=765216791]
-offset_left = 485.0
-offset_top = 293.0
-offset_right = 617.0
-offset_bottom = 316.0
-text = "estoy en creditos"
+[node name="Creditos" type="Node2D" unique_id=1220855157]
+script = ExtResource("1_jrvxy")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=523481892]
+repeat_size = Vector2(300, 0)
+autoscroll = Vector2(20, 0)
+
+[node name="Creditos" type="Sprite2D" parent="Parallax2D" unique_id=1082685614]
+position = Vector2(579.5, 327)
+scale = Vector2(0.6067708, 0.60925925)
+texture = ExtResource("1_f7w0e")
+
+[node name="Atras" type="Button" parent="." unique_id=637930317]
+offset_left = 494.0
+offset_top = 556.0
+offset_right = 666.0
+offset_bottom = 625.0
+text = "ATRAS"
+icon_alignment = 1
+
+[connection signal="pressed" from="Atras" to="." method="_on_atras_pressed"]

@@ -8,9 +8,10 @@ func _ready() -> void:
 	if GameManager.gano:
 		label_mensaje.text = "EXITO! Lograste equilibrar tus responsabilidades y entregar tu juego."
 	else:
-		label_mensaje.text = "Estás abrumado... El estrés te superó y no pudiste terminar el proyecto."
+		label_mensaje.text = "Estás abrumada... El estrés te superó y no pudiste terminar el proyecto."
 
 func _on_boton_reintentar_pressed() -> void:
+	AudioManager.play_sfx_click()
 	# Reiniciamos las variables del Autoload GameManager
 	GameManager.puntaje_balance = 20
 	GameManager.indice_pregunta = 0
