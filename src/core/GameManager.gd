@@ -15,6 +15,7 @@ var efecto_tunel_activo: ColorRect = null
 var camara_activa: Camera2D = null
 var pensamiento_activo: Node = null 
 var timer_notificaciones: Timer = null 
+var nivel_activo: Node2D = null # Referencia al Nivel para comunicarse con los íconos
 
 # Banco de notificaciones y dilemas (20 preguntas en total)
 var lista_preguntas: Array = [
@@ -167,7 +168,8 @@ func registrar_nivel(
 	timer_notif: Timer,
 	nodo_tunel: ColorRect = null,
 	nodo_camara: Camera2D = null,
-	nodo_pensamiento: Node = null
+	nodo_pensamiento: Node = null,
+	nodo_nivel: Node2D = null
 ) -> void:
 	pc_activa = nodo_pc
 	avatar_activo = nodo_avatar
@@ -175,6 +177,7 @@ func registrar_nivel(
 	camara_activa = nodo_camara
 	pensamiento_activo = nodo_pensamiento
 	timer_notificaciones = timer_notif
+	nivel_activo = nodo_nivel
 
 	puntaje_balance = 50
 	indice_pregunta = 0
@@ -244,19 +247,24 @@ func _actualizar_efecto_visual() -> void:
 		nivel_tunel = pow(factor_lineal, 1.8)
 	
 	# --- CONTROL DE MÚSICA DINÁMICA CON EL AUDIOMANAGER ---
-	# Si la distancia del centro supera el margen seguro (está desbalanceado)
 	if distancia_del_centro > margen_seguro:
-		# Si está sonando la calma, la detenemos y ponemos peligro
 		if AudioManager.calma.playing:
 			AudioManager.stop_calma()
 		if not AudioManager.peligro.playing:
 			AudioManager.play_peligro()
+			
+		# Notificamos al Nivel para acumular íconos translúcidos
+		if nivel_activo and nivel_activo.has_method("activar_peligro_iconos"):
+			nivel_activo.activar_peligro_iconos()
 	else:
-		# Si está dentro del rango seguro (balanceado)
 		if AudioManager.peligro.playing:
 			AudioManager.stop_peligro()
 		if not AudioManager.calma.playing:
 			AudioManager.play_calma()
+			
+		# Notificamos al Nivel para limpiar íconos 1 a 1
+		if nivel_activo and nivel_activo.has_method("activar_calma_iconos"):
+			nivel_activo.activar_calma_iconos()
 	# ------------------------------------------------------
 	
 	if efecto_tunel_activo.has_method("actualizar_efecto_tunel"):
@@ -266,7 +274,6 @@ func _actualizar_efecto_visual() -> void:
 		camara_activa.establecer_intensidad_pulsacion(nivel_tunel)
 
 func _evaluar_final_juego() -> void:
-	# Al finalizar el juego, detenemos la música para transicionar limpio
 	AudioManager.stop_calma()
 	AudioManager.stop_peligro()
 	

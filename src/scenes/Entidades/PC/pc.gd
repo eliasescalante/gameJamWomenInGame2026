@@ -51,8 +51,10 @@ func mostrar_pregunta(frase: String, v_si: int, v_no: int, r_si: String = "", r_
 	boton_no.visible = true
 	
 	_activar_campana()
+	AudioManager.play_sfx_notificacion()
 
 func _on_si_pressed() -> void:
+	AudioManager.play_sfx_aceptar()
 	_bloquear_interfaz()
 	_ocultar_campana()
 	
@@ -66,6 +68,7 @@ func _on_si_pressed() -> void:
 	_programar_limpieza_pantalla()
 
 func _on_no_pressed() -> void:
+	AudioManager.play_sfx_rechazar()
 	_bloquear_interfaz()
 	_ocultar_campana()
 	

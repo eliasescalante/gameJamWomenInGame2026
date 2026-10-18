@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dthse3j4lxaot"]
+
+[ext_resource type="Script" uid="uid://dgkcd1voe5eo2" path="res://src/scenes/Entidades/IconosSpawner/iconos_spawner.gd" id="1_rl6j6"]
+[ext_resource type="Texture2D" uid="uid://hrfyehlfjrs8" path="res://assets/Correo.png" id="2_a3imd"]
+[ext_resource type="Texture2D" uid="uid://dni53530p0lyy" path="res://assets/Instagram.png" id="3_x665m"]
+[ext_resource type="Texture2D" uid="uid://r8t4gwd2dug5" path="res://assets/NumeroNotificaciones.png" id="4_nus53"]
+[ext_resource type="Texture2D" uid="uid://ymxgavg5eq2n" path="res://assets/Tiktok.png" id="5_o38cs"]
+[ext_resource type="Texture2D" uid="uid://bpg0p7yepof5n" path="res://assets/Twitter.png" id="6_pv1gx"]
+[ext_resource type="Texture2D" uid="uid://cy4jo40wwk2lv" path="res://assets/Whatsapp2.png" id="7_c02t1"]
+[ext_resource type="Texture2D" uid="uid://518dp5s4vbdn" path="res://assets/Whatsapp.png" id="8_dt4oh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fhsag"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_a3imd")
+}],
+"loop": 1,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_x665m")
+}],
+"loop": 1,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_nus53")
+}],
+"loop": 1,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_o38cs")
+}],
+"loop": 1,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_pv1gx")
+}],
+"loop": 1,
+"name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_c02t1")
+}],
+"loop": 1,
+"name": &"6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_dt4oh")
+}],
+"loop": 1,
+"name": &"7",
+"speed": 5.0
+}]
+
+[node name="IconosSpawner" type="Node2D" unique_id=1350736230]
+script = ExtResource("1_rl6j6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=56681219]
+scale = Vector2(0.03, 0.03)
+sprite_frames = SubResource("SpriteFrames_fhsag")
+animation = &"7"
