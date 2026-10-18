@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dnmwiivj43qhb"]
+
+[ext_resource type="Texture2D" uid="uid://d2dsbj2lr34a8" path="res://assets/Pensamiento1.png" id="1_l0ski"]
+[ext_resource type="Script" uid="uid://cs1cngk7tpfm8" path="res://src/scenes/Entidades/Pensamientos/pensamientos.gd" id="1_vuj7u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fhsag"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+outline_color = Color(0.9340804, 0.9340805, 0.93408036, 1)
+
+[node name="Control" type="Control" unique_id=1023084003]
+custom_minimum_size = Vector2(600, 200)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -175.0
+offset_right = 300.0
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_vuj7u")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=506145042]
+custom_minimum_size = Vector2(500, 350)
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 350.0
+texture = ExtResource("1_l0ski")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1698873745]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 114.0
+offset_right = 507.0
+offset_bottom = 156.0
+text = "pensamiento"
+label_settings = SubResource("LabelSettings_fhsag")
+horizontal_alignment = 1
+autowrap_mode = 3

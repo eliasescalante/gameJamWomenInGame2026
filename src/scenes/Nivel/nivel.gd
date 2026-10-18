@@ -1,13 +1,27 @@
+
 extends Node2D
 
-@onready var avatar: Node2D = $CanvasLayer2/Avatar
 @onready var pc: Control = $Pc
+@onready var avatar: Node2D = $CanvasLayer2/Avatar
 @onready var efecto_tunel: ColorRect = $CanvasLayer/ColorRect
-@onready var camara: Camera2D = $Camera2D # <--- Referencia al nodo Camera2D
+@onready var camara: Camera2D = $Camera2D
+@onready var control: Control = $CanvasLayer2/Control
+@onready var timer_temp: Timer = $TimerNotificaciones if has_node("TimerNotificaciones") else null
+
 
 func _ready() -> void:
-	var timer_temp = Timer.new()
-	add_child(timer_temp)
-	
-	# Registramos las referencias incluyendo la cámara para el shake
-	GameManager.registrar_nivel(pc, avatar, timer_temp, efecto_tunel, camara)
+	if not timer_temp:
+		timer_temp = Timer.new()
+		timer_temp.name = "TimerNotificaciones"
+		add_child(timer_temp)
+		print("--- [SISTEMA] TimerNotificaciones creado automáticamente ---")
+
+	print("--- INICIANDO NIVEL EXITOSAMENTE ---")
+
+	GameManager.registrar_nivel(
+		pc,
+		avatar,
+		timer_temp,
+		efecto_tunel,
+		camara,
+	)

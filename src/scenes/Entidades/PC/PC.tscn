@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dh2ftyq0mt42v" path="res://src/scenes/Entidades/PC/pc.gd" id="1_1crj2"]
 [ext_resource type="Texture2D" uid="uid://debukg7yb2mxe" path="res://assets/Notificacion.png" id="2_3mo3l"]
+[ext_resource type="Texture2D" uid="uid://d2dsbj2lr34a8" path="res://assets/Pensamiento1.png" id="2_kpbax"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fhsag"]
 font_size = 40
@@ -53,6 +54,11 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_qpix5"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
 
 [node name="Pc" type="PanelContainer" unique_id=995380473]
 custom_minimum_size = Vector2(600, 250)
@@ -111,7 +117,29 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_v4xoa")
 text = "NO
 "
 
+[node name="GloboPensamiento" type="Control" parent="." unique_id=1021442364]
+layout_mode = 2
+
+[node name="SpriteGlobo" type="Sprite2D" parent="GloboPensamiento" unique_id=1481226247]
+position = Vector2(299, 170)
+scale = Vector2(0.42041668, 0.3)
+texture = ExtResource("2_kpbax")
+
+[node name="LabelPensamiento" type="Label" parent="GloboPensamiento" unique_id=1563143620]
+layout_mode = 0
+offset_left = 81.0
+offset_top = -23.0
+offset_right = 538.0
+offset_bottom = 234.0
+text = "mensaje
+"
+label_settings = SubResource("LabelSettings_qpix5")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
 [node name="Campana" type="Sprite2D" parent="." unique_id=1550899800]
+visible = false
 position = Vector2(655, -129)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_3mo3l")
