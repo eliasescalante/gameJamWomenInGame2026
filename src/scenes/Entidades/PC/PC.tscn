@@ -3,9 +3,12 @@
 [ext_resource type="Script" uid="uid://dh2ftyq0mt42v" path="res://src/scenes/Entidades/PC/pc.gd" id="1_1crj2"]
 [ext_resource type="Texture2D" uid="uid://debukg7yb2mxe" path="res://assets/Notificacion.png" id="2_3mo3l"]
 [ext_resource type="Texture2D" uid="uid://d2dsbj2lr34a8" path="res://assets/Pensamiento1.png" id="2_kpbax"]
+[ext_resource type="FontFile" uid="uid://c7fj18mo8p653" path="res://assets/Bitcount_Grid_Single,Indie_Flower,Pixelify_Sans/Indie_Flower/IndieFlower-Regular.ttf" id="2_y2nex"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fhsag"]
+font = ExtResource("2_y2nex")
 font_size = 40
+font_color = Color(0.9428228, 0.94282264, 0.94282264, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mo3l"]
 content_margin_left = 4.0
@@ -55,10 +58,9 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="LabelSettings" id="LabelSettings_qpix5"]
-font_size = 50
-font_color = Color(0, 0, 0, 1)
-outline_size = 3
+[sub_resource type="LabelSettings" id="LabelSettings_y2nex"]
+font = ExtResource("2_y2nex")
+font_size = 30
 
 [node name="Pc" type="PanelContainer" unique_id=995380473]
 custom_minimum_size = Vector2(600, 250)
@@ -133,7 +135,7 @@ offset_right = 538.0
 offset_bottom = 234.0
 text = "mensaje
 "
-label_settings = SubResource("LabelSettings_qpix5")
+label_settings = SubResource("LabelSettings_y2nex")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3

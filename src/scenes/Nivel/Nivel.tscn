@@ -18,12 +18,12 @@ shader_parameter/suavizado = 0.4
 script = ExtResource("1_xopn3")
 
 [node name="Parallax" type="Parallax2D" parent="." unique_id=1194257536]
-repeat_size = Vector2(400, 0)
-autoscroll = Vector2(20, 0)
+repeat_size = Vector2(500, 0)
+autoscroll = Vector2(10, 0)
 
 [node name="Habitacion" type="Sprite2D" parent="Parallax" unique_id=2083964486]
-position = Vector2(364, 293)
-scale = Vector2(0.546875, 0.7583333)
+position = Vector2(341, 302)
+scale = Vector2(1, 1.386)
 texture = ExtResource("2_fl485")
 
 [node name="VentanaPC" type="Sprite2D" parent="." unique_id=1916270205]
